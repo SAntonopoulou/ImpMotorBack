@@ -54,6 +54,8 @@ public class Vehicle {
         this.colour = colour;
         this.interiorColour = interiorColour;
     }
+
+    public int getID() { return this.ID; }
     private void queryDatabase(String dbURL, String dbUsername, String dbPassword){
         String query = "SELECT * FROM vehicles WHERE id =" + this.ID;
 
@@ -76,7 +78,7 @@ public class Vehicle {
             while (resultSet.next()) {
                 // put all parameters for the vehicle into here using a
                 // similar manner
-                this.ID = resultSet.getInt("vehicle_id");
+                this.ID = resultSet.getInt("id");
             }
         } catch (SQLException e) {
             e.printStackTrace(); // Handle SQL exceptions

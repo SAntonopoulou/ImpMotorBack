@@ -4,8 +4,8 @@ public class ImperiumMotoring {
 		String dbUsername = "impmotorremote";
 		String dbPassword = "1lwxDYOVDpuzJnEMpt6P8Lzi33mk5R";
 		
-		Utils utils = new Utils(dbURL, dbUsername, dbPassword);
-		User user = new User();
+		//Utils utils = new Utils(dbURL, dbUsername, dbPassword);
+		//User user = new User();
 		/*
 		// Registration Test
 		UserRegistration userRegistration = new UserRegistration(dbURL, dbUsername, dbPassword);
@@ -14,7 +14,7 @@ public class ImperiumMotoring {
 		*/
 			
 		// Login Test
-		if(Utils.loginUser(user)) {
+		/*if(Utils.loginUser(user)) {
 			System.out.println("You are logged in!");
 			System.out.println("Is Admin: " + user.getAdminStatus());
 			if(user.getAdminStatus()) { 
@@ -26,6 +26,9 @@ public class ImperiumMotoring {
 		} else {
 			System.out.println("Invalid login.");
 		}
-		
+		*/
+		Vehicle vehicle = new Vehicle(1,dbURL, dbUsername, dbPassword);
+		int vehicle_id = vehicle.getID();
+		System.out.println(vehicle_id);	
 	}
 }
